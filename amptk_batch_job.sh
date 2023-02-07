@@ -29,6 +29,8 @@ amptk cluster -i test.demux.fq.gz -o test
 amptk filter -i test.otu_table.txt -f test.cluster.otus.fa
 
 # Assign taxonomy
+### Disclaimer: You have to install the reference database in advance w amptk install -i ITS
+
 amptk taxonomy -f test.filtered.otus.fa -i test.final.txt -m test.mappingfile.txt -d ITS2 -o test
 
 # Link to FunGuild
